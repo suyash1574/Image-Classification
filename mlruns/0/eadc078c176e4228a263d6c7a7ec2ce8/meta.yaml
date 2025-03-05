@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Projects/Image%20Classification/image%20classification/mlruns/0/eadc078c176e4228a263d6c7a7ec2ce8/artifacts
+end_time: 1741198048721
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: eadc078c176e4228a263d6c7a7ec2ce8
+run_name: persistent-ox-55
+run_uuid: eadc078c176e4228a263d6c7a7ec2ce8
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741198048695
+status: 3
+tags: []
+user_id: zinju

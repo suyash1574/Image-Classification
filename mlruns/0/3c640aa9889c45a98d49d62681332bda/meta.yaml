@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Projects/Image%20Classification/image%20classification/mlruns/0/3c640aa9889c45a98d49d62681332bda/artifacts
+end_time: 1741198069557
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 3c640aa9889c45a98d49d62681332bda
+run_name: learned-robin-70
+run_uuid: 3c640aa9889c45a98d49d62681332bda
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741198069527
+status: 3
+tags: []
+user_id: zinju

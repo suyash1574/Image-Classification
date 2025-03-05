@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Projects/Image%20Classification/image%20classification/mlruns/0/c82e3f9cffda477ea72ae66e9243e32d/artifacts
+end_time: 1741199188666
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c82e3f9cffda477ea72ae66e9243e32d
+run_name: welcoming-shrew-117
+run_uuid: c82e3f9cffda477ea72ae66e9243e32d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741199188514
+status: 3
+tags: []
+user_id: zinju

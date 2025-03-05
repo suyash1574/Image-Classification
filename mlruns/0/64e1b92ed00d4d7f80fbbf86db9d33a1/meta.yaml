@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Projects/Image%20Classification/image%20classification/mlruns/0/64e1b92ed00d4d7f80fbbf86db9d33a1/artifacts
+end_time: 1741198043999
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 64e1b92ed00d4d7f80fbbf86db9d33a1
+run_name: masked-doe-491
+run_uuid: 64e1b92ed00d4d7f80fbbf86db9d33a1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741198043972
+status: 3
+tags: []
+user_id: zinju

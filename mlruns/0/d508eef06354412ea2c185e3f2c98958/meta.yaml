@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Projects/Image%20Classification/image%20classification/mlruns/0/d508eef06354412ea2c185e3f2c98958/artifacts
+end_time: 1741198072314
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: d508eef06354412ea2c185e3f2c98958
+run_name: popular-cat-336
+run_uuid: d508eef06354412ea2c185e3f2c98958
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741198072284
+status: 3
+tags: []
+user_id: zinju

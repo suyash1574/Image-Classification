@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Projects/Image%20Classification/image%20classification/mlruns/0/849230e7340b470fbd5974817d4836eb/artifacts
+end_time: 1741198072112
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 849230e7340b470fbd5974817d4836eb
+run_name: rare-cod-600
+run_uuid: 849230e7340b470fbd5974817d4836eb
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741198072082
+status: 3
+tags: []
+user_id: zinju

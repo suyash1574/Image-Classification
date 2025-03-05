@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Projects/Image%20Classification/image%20classification/mlruns/0/ca6bb637578d43b9bd87414e7a56c545/artifacts
+end_time: 1741198680570
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ca6bb637578d43b9bd87414e7a56c545
+run_name: blushing-yak-799
+run_uuid: ca6bb637578d43b9bd87414e7a56c545
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741198680525
+status: 3
+tags: []
+user_id: zinju

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Classifier</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Image Classification Demo</h1>
+        <p>Upload a 32x32 image to classify it (e.g., airplane, cat, dog).</p>
+        <form id="upload-form" enctype="multipart/form-data">
+            <input type="file" id="image" name="file" accept="image/*" required>
+            <button type="submit">Classify</button>
+        </form>
+        <div id="result">
+            <p><strong>Result:</strong> <span id="class"></span></p>
+            <p><strong>Confidence:</strong> <span id="confidence"></span></p>
+            <img id="preview" alt="Uploaded Image" style="display:none; max-width: 200px;">
+        </div>
+    </div>
+    <script>
+        document.getElementById('upload-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const fileInput = document.getElementById('image');
+            const formData = new FormData();
+            formData.append('file', fileInput.files[0]);
+            const preview = document.getElementById('preview');
+            preview.src = URL.createObjectURL(fileInput.files[0]);
+            preview.style.display = 'block';
+            const response = await fetch('/predict', {
+                method: 'POST',
+                body: formData
+            });
+            const data = await response.json();
+            document.getElementById('class').textContent = data.class;
+            document.getElementById('confidence').textContent = (data.confidence * 100).toFixed(2) + '%';
+        });
+    </script>
+</body>
+</html>

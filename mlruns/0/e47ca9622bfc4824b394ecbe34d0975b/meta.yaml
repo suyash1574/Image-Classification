@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Projects/Image%20Classification/image%20classification/mlruns/0/e47ca9622bfc4824b394ecbe34d0975b/artifacts
+end_time: 1741198071920
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e47ca9622bfc4824b394ecbe34d0975b
+run_name: mercurial-shrew-326
+run_uuid: e47ca9622bfc4824b394ecbe34d0975b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741198071889
+status: 3
+tags: []
+user_id: zinju
