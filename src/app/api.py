@@ -22,10 +22,12 @@ async def serve_homepage():
 @app.post("/predict")
 async def predict(file: UploadFile = File(...)):
     start_time = time.time()
-    image = Image.open(io.BytesIO(await file.read())).resize((32, 32))
+    image = Image.open(io.BytesIO(await file.read())).convert("RGB").resize((32, 32))
     image_array = np.array(image) / 255.0
     image_array = np.expand_dims(image_array, axis=0)
+    print(f"Image shape: {image_array.shape}")  # Debug shape
     prediction = model.predict(image_array)
+    print(f"Prediction probabilities: {prediction[0]}")  # Debug probabilities
     class_idx = np.argmax(prediction)
     latency = time.time() - start_time
     with mlflow.start_run():
