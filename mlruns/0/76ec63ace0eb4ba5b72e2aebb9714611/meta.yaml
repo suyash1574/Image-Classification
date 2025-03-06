@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Projects/Image%20Classification/image%20classification/mlruns/0/76ec63ace0eb4ba5b72e2aebb9714611/artifacts
+end_time: 1741248189145
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 76ec63ace0eb4ba5b72e2aebb9714611
+run_name: beautiful-shad-946
+run_uuid: 76ec63ace0eb4ba5b72e2aebb9714611
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741248189097
+status: 3
+tags: []
+user_id: zinju

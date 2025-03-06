@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Projects/Image%20Classification/image%20classification/mlruns/0/d1a0a5d4c3c04885b6c50d6ce1387359/artifacts
+end_time: 1741248237875
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: d1a0a5d4c3c04885b6c50d6ce1387359
+run_name: handsome-shoat-939
+run_uuid: d1a0a5d4c3c04885b6c50d6ce1387359
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741248237830
+status: 3
+tags: []
+user_id: zinju

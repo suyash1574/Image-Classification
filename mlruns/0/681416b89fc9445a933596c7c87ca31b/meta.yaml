@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Projects/Image%20Classification/image%20classification/mlruns/0/681416b89fc9445a933596c7c87ca31b/artifacts
+end_time: 1741248185672
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 681416b89fc9445a933596c7c87ca31b
+run_name: enchanting-fly-51
+run_uuid: 681416b89fc9445a933596c7c87ca31b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741248185617
+status: 3
+tags: []
+user_id: zinju

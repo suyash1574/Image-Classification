@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Projects/Image%20Classification/image%20classification/mlruns/0/bd40eef8435f42feb5555ccfd814f3ce/artifacts
+end_time: 1741248187973
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: bd40eef8435f42feb5555ccfd814f3ce
+run_name: treasured-bear-168
+run_uuid: bd40eef8435f42feb5555ccfd814f3ce
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741248187916
+status: 3
+tags: []
+user_id: zinju

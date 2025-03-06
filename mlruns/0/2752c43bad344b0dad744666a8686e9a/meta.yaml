@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Projects/Image%20Classification/image%20classification/mlruns/0/2752c43bad344b0dad744666a8686e9a/artifacts
+end_time: 1741248258239
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 2752c43bad344b0dad744666a8686e9a
+run_name: legendary-fawn-781
+run_uuid: 2752c43bad344b0dad744666a8686e9a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741248258182
+status: 3
+tags: []
+user_id: zinju

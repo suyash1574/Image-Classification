@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Projects/Image%20Classification/image%20classification/mlruns/0/32a85488c4364762b7acef3d47bd23ae/artifacts
+end_time: 1741248301827
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 32a85488c4364762b7acef3d47bd23ae
+run_name: intrigued-rook-305
+run_uuid: 32a85488c4364762b7acef3d47bd23ae
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741248301778
+status: 3
+tags: []
+user_id: zinju
