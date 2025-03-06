@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Projects/Image%20Classification/image%20classification/mlruns/0/82c4703205a64e64b3d30ba4287ad179/artifacts
+end_time: 1741246547365
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 82c4703205a64e64b3d30ba4287ad179
+run_name: ambitious-grub-687
+run_uuid: 82c4703205a64e64b3d30ba4287ad179
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741244564507
+status: 3
+tags: []
+user_id: zinju

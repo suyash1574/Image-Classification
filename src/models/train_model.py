@@ -1,35 +1,45 @@
 import tensorflow as tf
-from tensorflow.keras import layers, models
+from tensorflow.keras import layers, Model
+from tensorflow.keras.applications import VGG16
 import mlflow
 import mlflow.tensorflow
 import numpy as np
 import os
 
 def build_model():
-    model = models.Sequential([
-        layers.Conv2D(32, (3, 3), activation='relu', input_shape=(32, 32, 3)),
-        layers.MaxPooling2D((2, 2)),
-        layers.Conv2D(64, (3, 3), activation='relu'),
-        layers.MaxPooling2D((2, 2)),
-        layers.Conv2D(64, (3, 3), activation='relu'),
-        layers.Flatten(),
-        layers.Dense(64, activation='relu'),
-        layers.Dropout(0.5),  # Add dropout to reduce overfitting
-        layers.Dense(10, activation='softmax')
-    ])
+    # Load VGG16 pre-trained on ImageNet, exclude top layers
+    base_model = VGG16(weights='imagenet', include_top=False, input_shape=(32, 32, 3))
+    base_model.trainable = False  # Freeze pre-trained layers
+
+    # Define input and connect layers using Functional API
+    inputs = tf.keras.Input(shape=(32, 32, 3))
+    x = base_model(inputs, training=False)  # Pass input through VGG16
+    x = layers.Flatten()(x)
+    x = layers.Dense(512, activation='relu')(x)
+    x = layers.Dropout(0.5)(x)
+    outputs = layers.Dense(10, activation='softmax')(x)  # 10 classes for CIFAR-10
+
+    # Create model
+    model = Model(inputs, outputs)
     return model
 
 def train_model():
+    # Load CIFAR-10 data
     (x_train, y_train), (x_test, y_test) = load_cifar10_data()
     x_train, x_test = x_train / 255.0, x_test / 255.0
+
+    # Build and compile model
     model = build_model()
     model.compile(optimizer='adam',
                   loss='sparse_categorical_crossentropy',
                   metrics=['accuracy'])
+
+    # Train with MLflow tracking
     with mlflow.start_run():
-        history = model.fit(x_train, y_train, epochs=20, validation_data=(x_test, y_test))  # Increase to 20 epochs
+        history = model.fit(x_train, y_train, epochs=10, validation_data=(x_test, y_test), batch_size=64)
         test_loss, test_acc = model.evaluate(x_test, y_test)
-        mlflow.log_param("epochs", 20)
+        mlflow.log_param("epochs", 10)
+        mlflow.log_param("batch_size", 64)
         mlflow.log_metric("test_loss", test_loss)
         mlflow.log_metric("test_accuracy", test_acc)
         mlflow.tensorflow.log_model(model, "model")

@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Projects/Image%20Classification/image%20classification/mlruns/0/17fab145697346299852ac0e2e90c7b1/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 17fab145697346299852ac0e2e90c7b1
+run_name: traveling-fowl-724
+run_uuid: 17fab145697346299852ac0e2e90c7b1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741244153676
+status: 1
+tags: []
+user_id: zinju

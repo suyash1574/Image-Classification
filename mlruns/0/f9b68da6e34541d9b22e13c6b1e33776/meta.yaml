@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Projects/Image%20Classification/image%20classification/mlruns/0/f9b68da6e34541d9b22e13c6b1e33776/artifacts
+end_time: 1741247568593
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f9b68da6e34541d9b22e13c6b1e33776
+run_name: capricious-wren-765
+run_uuid: f9b68da6e34541d9b22e13c6b1e33776
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741247568506
+status: 3
+tags: []
+user_id: zinju

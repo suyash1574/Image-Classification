@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Projects/Image%20Classification/image%20classification/mlruns/0/0f1e1b0cc1b7408a89c52d570fe2c9fa/artifacts
+end_time: 1741247571305
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 0f1e1b0cc1b7408a89c52d570fe2c9fa
+run_name: placid-grouse-784
+run_uuid: 0f1e1b0cc1b7408a89c52d570fe2c9fa
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1741247571247
+status: 3
+tags: []
+user_id: zinju

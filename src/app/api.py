@@ -25,9 +25,9 @@ async def predict(file: UploadFile = File(...)):
     image = Image.open(io.BytesIO(await file.read())).convert("RGB").resize((32, 32))
     image_array = np.array(image) / 255.0
     image_array = np.expand_dims(image_array, axis=0)
-    print(f"Image shape: {image_array.shape}")  # Debug shape
+    print(f"Image shape: {image_array.shape}")
     prediction = model.predict(image_array)
-    print(f"Prediction probabilities: {prediction[0]}")  # Debug probabilities
+    print(f"Prediction probabilities: {prediction[0]}")
     class_idx = np.argmax(prediction)
     latency = time.time() - start_time
     with mlflow.start_run():
