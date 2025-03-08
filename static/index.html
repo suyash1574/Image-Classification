@@ -5,11 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Classifier</title>
     <link rel="stylesheet" href="/static/css/style.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background: #4682b4;
+            color: white;
+            padding: 15px;
+            font-size: 22px;
+            font-weight: bold;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        .nav {
+            background: #5a9bd6;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 26px;
+            font-weight: bold;
+            color: #2f4f4f;
+        }
+        p {
+            font-size: 16px;
+            color: #555;
+        }
+        input[type="file"] {
+            margin: 10px 0;
+            padding: 10px;
+            background: #fff;
+            border: 2px solid #4682b4;
+            border-radius: 5px;
+        }
+        button {
+            background: #4682b4;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background: #5a9bd6;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+        #preview {
+            margin-top: 10px;
+            max-width: 100%;
+            border-radius: 5px;
+            border: 2px solid #4682b4;
+            display: none;
+        }
+    </style>
 </head>
 <body>
+    <div class="header">Image Classification App</div>
+    <div class="nav">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">How It Works</a>
+        <a href="#">Contact</a>
+    </div>
     <div class="container">
-        <h1>Image Classification</h1>
-        <p>Upload a 32x32 image to classify it (e.g., airplane, cat, dog).</p>
+        <h1>Upload an Image</h1>
+        <p><strong>Upload a 32x32 image</strong> to classify it (e.g., airplane, cat, dog).</p>
         <form id="upload-form" enctype="multipart/form-data">
             <input type="file" id="image" name="file" accept="image/*" required>
             <button type="submit">Classify</button>
@@ -17,7 +109,7 @@
         <div id="result">
             <p><strong>Result:</strong> <span id="class"></span></p>
             <p><strong>Confidence:</strong> <span id="confidence"></span></p>
-            <img id="preview" alt="Uploaded Image" style="display:none; max-width: 200px;">
+            <img id="preview" alt="Uploaded Image">
         </div>
     </div>
     <script>
@@ -26,13 +118,16 @@
             const fileInput = document.getElementById('image');
             const formData = new FormData();
             formData.append('file', fileInput.files[0]);
+            
             const preview = document.getElementById('preview');
             preview.src = URL.createObjectURL(fileInput.files[0]);
             preview.style.display = 'block';
+            
             const response = await fetch('/predict', {
                 method: 'POST',
                 body: formData
             });
+            
             const data = await response.json();
             document.getElementById('class').textContent = data.class;
             document.getElementById('confidence').textContent = (data.confidence * 100).toFixed(2) + '%';
